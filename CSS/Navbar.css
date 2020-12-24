@@ -1,0 +1,77 @@
+/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+/* https://www.w3schools.com/howto/howto_css_fading_buttons.asp */
+/* https://www.w3schools.com/css/css_navbar_horizontal.asp */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top:0;
+    width:100%;
+    border: 5px solid #333;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: #111;}
+  
+  ul.topnav li.right {float: right;}
+  
+  @media screen and (max-width: 200px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+  }
+
+  .button {
+    position: relative;
+    background-color: #555;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -5px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
